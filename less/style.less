@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'blackjackregular';
+    font-family: "blackjackregular";
     src: url('../fonts/BlackJack/black_jack-webfont.eot');
     src: url('../fonts/BlackJack/black_jack-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/BlackJack/black_jack-webfont.woff') format('woff'),
@@ -9,12 +9,20 @@
     font-style: normal;
 
 }
-
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+  url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 
 body{
 	color:#7e7e7e;
-	font: 16px 'Proxima Nova' Arial, sans-serif;
+	font: 16px "ProximaNovaRegular", Arial, sans-serif;
 	
 	}
 
@@ -22,10 +30,10 @@ header{
 	background: #61c0e7;
 }
 h2{
-	font: 40px 'Proxima Nova' Arial, sans-serif;
+	font: 40px "ProximaNovaRegular", Arial, sans-serif;
 	font-weight: 200;
 	color: #545454;
-	
+    margin-bottom: 40px;
 }
 p{
 	
@@ -42,8 +50,9 @@ span{
 }
 
 .pt-meet{
-	background: #61c0e7;
+	background:  url("../img/iphone5.png")no-repeat 25% 480%, #61c0e7;
 	padding-top: 40px;
+  padding-bottom: 230px;
 	color:#fff;
 	p{
 		font-size:35px;
@@ -55,10 +64,16 @@ span{
 	h1{
 		color:#fff;
 		font-size:70px;
-		font-family: "blackjackregular" 'Times New Roman', serif;
+		font-family: "blackjackregular", TimesNewRoman, serif;
 	}
 	.button{
 		border-color: #fff;
+      &:hover{
+        background: rgba(255, 255, 255, 0.30);
+      }
+		.fa{
+			color:#fff;
+		}
 	}
 }
 .button{
@@ -69,6 +84,7 @@ span{
 		font-size:16px;
 		color:#000;
 		display:inline-block;
+		margin-left: 10px;
 		
 	}
 }
@@ -78,12 +94,18 @@ span{
 
 
 .pt-about{
-	background: #F4F4F4;
-	padding-top:145px;
+	background:  url("../img/ipad.png")no-repeat 110% 250%, #F4F4F4;
+  padding-top:145px;
 	padding-bottom: 141px;
 	.button{
 		color:rgb( 20, 175, 143 );
 		border-color: rgb( 20, 175, 143 );
+      &:hover{
+        background: rgba(20, 175, 143, 0.30);
+      }
+		.fa{
+			color:rgb( 20, 175, 143 );
+		}
 	}
 }
 
@@ -97,21 +119,29 @@ blockquote {
    
 
 .pt-portfolio{
-	background: #FFF;
+	background: url("../img/devices.png")no-repeat -30% 125%, #FFF;
 	padding-top: 105px;
 	padding-bottom: 237px;
-	
+	span{
+      color:#474e5d;
+    }
 	.content{
 		padding-left: 65px;
 	}
 	.button{
 		color:#ea4c89;
 		border-color:#ea4c89;
+      &:hover{
+        background: rgba(234, 76, 137, 0.3);
+      }
+		.fa{
+			color:#ea4c89;
+		}
 	}
 }
 
 .pt-donate{
-	background: #13c1ac;
+	background: url("../img/bg.jpg");
 	padding:100px 0;
 	color:#fff;
 	h2{
@@ -120,6 +150,12 @@ blockquote {
 	.button{
 		color:#fff;
 		border-color:#fff;
+      &:hover{
+        background: rgba(255, 255, 255, 0.30);
+      }
+		.fa{
+			color:#fff;
+		}
 	}
 }
 .pt-contact{
@@ -129,13 +165,99 @@ blockquote {
 }
 .pt-socials{
 	list-style:none;
-	.fa{
+  margin-bottom: 65px;
+  li{
+    display: inline-block;
+    padding-bottom:10px;
+    padding-top: 13px;
+    border-radius:100%;
+    border:3px solid #545454;
+    margin-right: 35px;
+  }
+  .dribble{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .fb{
+    padding-left:19px;
+    padding-right:19px;
+  }
+  .tw,
+  .plane{
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .fa{
 	color:#545454;
 	font-size:20px;
 }
 
 }
+input.pt-email-field{
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 10px;
+}
 
+input[type="email"]{
+  width:220px;
+  display: inline-block;
+  margin-left: 17px;
+  color:#545454;
+  padding:20px;
+  height:45px;
+
+}
+label{
+  display: inline-block;
+
+}
+button[type="submit"]{
+  background: transparent;
+  padding:0;
+}
+.pt-submit .fa-envelope{
+  color:#6ec5ea;
+  margin-left:-60px;
+}
+
+footer{
+  padding-top:50px;
+  padding-bottom:40px;
+}
+
+
+::-webkit-input-placeholder {
+  font-style:italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-style:italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-style:italic;
+}
+
+:-ms-input-placeholder {
+  font-style:italic;
+}
+
+
+.goTop{
+  width:40px;
+  height:40px;
+  padding:20px;
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  border-radius: 10px;
+  /*display:none;*/
+  background: url("../img/icon.png") no-repeat 50% 50%, #f4f4f4;;
+
+}
 
 
 // Small screens

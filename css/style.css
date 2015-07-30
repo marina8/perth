@@ -1,21 +1,29 @@
 @font-face {
-  font-family: 'blackjackregular';
+  font-family: "blackjackregular";
   src: url('../fonts/BlackJack/black_jack-webfont.eot');
   src: url('../fonts/BlackJack/black_jack-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BlackJack/black_jack-webfont.woff') format('woff'), url('../fonts/BlackJack/black_jack-webfont.ttf') format('truetype'), url('../fonts/BlackJack/black_jack-webfont.svg#blackjackregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+  src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   color: #7e7e7e;
-  font: 16px 'Proxima Nova' Arial, sans-serif;
+  font: 16px "ProximaNovaRegular", Arial, sans-serif;
 }
 header {
   background: #61c0e7;
 }
 h2 {
-  font: 40px 'Proxima Nova' Arial, sans-serif;
+  font: 40px "ProximaNovaRegular", Arial, sans-serif;
   font-weight: 200;
   color: #545454;
+  margin-bottom: 40px;
 }
 span {
   font-style: italic;
@@ -27,8 +35,9 @@ span {
   line-height: 117px;
 }
 .pt-meet {
-  background: #61c0e7;
+  background: url("../img/iphone5.png") no-repeat 25% 480%, #61c0e7;
   padding-top: 40px;
+  padding-bottom: 230px;
   color: #fff;
 }
 .pt-meet p {
@@ -41,10 +50,16 @@ span {
 .pt-meet h1 {
   color: #fff;
   font-size: 70px;
-  font-family: "blackjackregular" 'Times New Roman', serif;
+  font-family: "blackjackregular", TimesNewRoman, serif;
 }
 .pt-meet .button {
   border-color: #fff;
+}
+.pt-meet .button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.pt-meet .button .fa {
+  color: #fff;
 }
 .button {
   text-transform: uppercase;
@@ -55,15 +70,22 @@ span {
   font-size: 16px;
   color: #000;
   display: inline-block;
+  margin-left: 10px;
 }
 .pt-about {
-  background: #F4F4F4;
+  background: url("../img/ipad.png") no-repeat 110% 250%, #f4f4f4;
   padding-top: 145px;
   padding-bottom: 141px;
 }
 .pt-about .button {
   color: #14af8f;
   border-color: #14af8f;
+}
+.pt-about .button:hover {
+  background: rgba(20, 175, 143, 0.3);
+}
+.pt-about .button .fa {
+  color: #14af8f;
 }
 blockquote {
   padding-top: 0;
@@ -72,9 +94,12 @@ blockquote {
   font-style: italic;
 }
 .pt-portfolio {
-  background: #FFF;
+  background: url("../img/devices.png") no-repeat -30% 125%, #ffffff;
   padding-top: 105px;
   padding-bottom: 237px;
+}
+.pt-portfolio span {
+  color: #474e5d;
 }
 .pt-portfolio .content {
   padding-left: 65px;
@@ -83,8 +108,14 @@ blockquote {
   color: #ea4c89;
   border-color: #ea4c89;
 }
+.pt-portfolio .button:hover {
+  background: rgba(234, 76, 137, 0.3);
+}
+.pt-portfolio .button .fa {
+  color: #ea4c89;
+}
 .pt-donate {
-  background: #13c1ac;
+  background: url("../img/bg.jpg");
   padding: 100px 0;
   color: #fff;
 }
@@ -95,6 +126,12 @@ blockquote {
   color: #fff;
   border-color: #fff;
 }
+.pt-donate .button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.pt-donate .button .fa {
+  color: #fff;
+}
 .pt-contact {
   background: #F4F4F4;
   padding-top: 242px;
@@ -102,10 +139,86 @@ blockquote {
 }
 .pt-socials {
   list-style: none;
+  margin-bottom: 65px;
+}
+.pt-socials li {
+  display: inline-block;
+  padding-bottom: 10px;
+  padding-top: 13px;
+  border-radius: 100%;
+  border: 3px solid #545454;
+  margin-right: 35px;
+}
+.pt-socials .dribble {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.pt-socials .fb {
+  padding-left: 19px;
+  padding-right: 19px;
+}
+.pt-socials .tw,
+.pt-socials .plane {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .pt-socials .fa {
   color: #545454;
   font-size: 20px;
+}
+input.pt-email-field {
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 10px;
+}
+input[type="email"] {
+  width: 220px;
+  display: inline-block;
+  margin-left: 17px;
+  color: #545454;
+  padding: 20px;
+  height: 45px;
+}
+label {
+  display: inline-block;
+}
+button[type="submit"] {
+  background: transparent;
+  padding: 0;
+}
+.pt-submit .fa-envelope {
+  color: #6ec5ea;
+  margin-left: -60px;
+}
+footer {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+.goTop {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 10px;
+  /*display:none;*/
+  background: url("../img/icon.png") no-repeat 50% 50%, #f4f4f4;
 }
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
